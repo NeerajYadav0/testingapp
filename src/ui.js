@@ -871,7 +871,7 @@ const UI = {
   DOMAIN_MAX_LIMIT_VALIDATION: 'Only 5 domains can be added',
   DOWNLOAD: 'Download',
   SHARE: 'Share',
-  EXPLORE: 'Explore',
+  EXPLORE: 'Exploreeee',
 };
 
 export default UI;
