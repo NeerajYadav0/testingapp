@@ -36,7 +36,7 @@ export default function Home() {
         metaTag.setAttribute(key, meta[key]);
       });
       document.head.appendChild(metaTag);
-    });
+    });console.log('entered');
 
   }, []);
 
@@ -70,8 +70,33 @@ export default function Home() {
   const handelExplore = () => {
     window.open(URL.ASSESSMENT, '_blank');
   }
-  return (
-    <div className='container'>
+  const render=()=>{
+    document.title = "Alignmycareer Course Completion Certificate";
+    const metaTags = [
+      { property: "og:title", content: "Alignmycareer Course Completion Certificate" },
+      { property: "og:url", content: "https://neerajyadav0.github.io/testing-repo/" },
+      { property: "og:description", content: "my completion certi" },
+      { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:site_name", content: "Alignmycareer" },
+      { property: "og:locale", content: "en_US" },
+    ];
+
+    metaTags.forEach((meta) => {
+      const metaTag = document.createElement('meta');
+      Object.keys(meta).forEach((key) => {
+        metaTag.setAttribute(key, meta[key]);
+      });
+      document.head.appendChild(metaTag);
+    });
+    console.log('data')
+    return null;
+  }
+  return (<>    
+  {render()}
+  <div className='container'>
+      
       <Grid container className='d-flex flex-wrap justify-content-evenly'>
         <Grid item md={8} sm={12} xs={12} className='d-flex flex-column gap-3'>
           <div >
@@ -171,5 +196,6 @@ export default function Home() {
         </Grid>
       </Grid>
     </div>
+    </>
   )
 }
