@@ -1,15 +1,15 @@
 import React from 'react';
 import Home from './home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 
 function App() {
     <Router>
-    <Switch>
+    <Routes>
       <Route exact path="/" component={Home} />
       <Route path="/certificate" component={Home} />
-    </Switch>
+    </Routes>
   </Router>
 }
 
