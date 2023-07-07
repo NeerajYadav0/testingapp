@@ -70,6 +70,26 @@ export default function Home() {
 
   };
 
+  useEffect(() => {
+    // Dynamically set the OG tags
+    const ogTitle = 'My Page Title';
+    const ogDescription = 'My page description';
+    const ogImageUrl = 'https://example.com/image.jpg';
+
+    const ogTitleTag = document.querySelector('meta[property="og:title"]');
+    const ogDescriptionTag = document.querySelector('meta[property="og:description"]');
+    const ogImageUrlTag = document.querySelector('meta[property="og:image"]');
+
+    if (ogTitleTag) {
+      ogTitleTag.setAttribute('content', ogTitle);
+    }
+    if (ogDescriptionTag) {
+      ogDescriptionTag.setAttribute('content', ogDescription);
+    }
+    if (ogImageUrlTag) {
+      ogImageUrlTag.setAttribute('content', ogImageUrl);
+    }
+  }, []);
   const handelExplore = () => {
     window.open(URL.ASSESSMENT, '_blank');
   }
