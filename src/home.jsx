@@ -23,9 +23,9 @@ export default function Home() {
     { property: "og:title", content: "Alignmycareer Course Completion Certificate" },
     { property: "og:url", content: "https://neerajyadav0.github.io/testing-repo/" },
     { property: "og:description", content: "my completion certi" },
-    { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
-    { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
-    { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+    { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
+    { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
+    { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
     { property: "og:site_name", content: "Alignmycareer" },
     { property: "og:locale", content: "en_US" },
   ];
