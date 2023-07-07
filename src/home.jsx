@@ -14,7 +14,9 @@ import UI from './ui'
 import URL from './urls';
 
 export default function Home() {
+
   const [anchorEl, setAnchorEl] = useState(null);
+  
   useEffect(() => {
     document.title = "Alignmycareer Course Completion Certificate";
     const metaTags = [
@@ -36,14 +38,6 @@ export default function Home() {
       document.head.appendChild(metaTag);
     });
 
-    return () => {
-      metaTags.forEach((meta) => {
-        const existingMetaTag = document.querySelector(`meta[${Object.keys(meta).map((key) => `${key}="${meta[key]}"`).join(" ")}]`);
-        if (existingMetaTag) {
-          document.head.removeChild(existingMetaTag);
-        }
-      });
-    };
   }, []);
 
 
