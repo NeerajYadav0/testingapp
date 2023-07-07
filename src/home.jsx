@@ -18,30 +18,30 @@ import { Helmet } from 'react-helmet';
 export default function Home() {
 
   const [anchorEl, setAnchorEl] = useState(null);
-  const metaTags = [
-    { name:'title', property: "title", content: "Alignmycareer Course Completion Certificate" },
-    { property: "og:title", content: "Alignmycareer Course Completion Certificate" },
-    { property: "og:url", content: "https://neerajyadav0.github.io/testing-repo/" },
-    { property: "og:description", content: "my completion certi" },
-    { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
-    { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
-    { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
-    { property: "og:site_name", content: "Alignmycareer" },
-    { property: "og:locale", content: "en_US" },
-  ];
+ 
   
-  // useEffect(() => {
-  //   document.title = "Alignmycareer Course Completion Certificate";
+  useEffect(() => {
+    const metaTags = [
+      { property: "og:title", content: "Alignmycareer Course Completion Certificate" },
+      { property: "og:url", content: "https://neerajyadav0.github.io/testing-repo/" },
+      { property: "og:description", content: "my completion certi" },
+      { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1.jpg" },
+      { property: "og:site_name", content: "Alignmycareer" },
+      { property: "og:locale", content: "en_US" },
+    ];
+    document.title = "Alignmycareer Course Completion Certificate";
 
-  //   metaTags.forEach((meta) => {
-  //     const metaTag = document.createElement('meta');
-  //     Object.keys(meta).forEach((key) => {
-  //       metaTag.setAttribute(key, meta[key]);
-  //     });
-  //     document.head.appendChild(metaTag);
-  //   });console.log('entered');
+    metaTags.forEach((meta) => {
+      const metaTag = document.createElement('meta');
+      Object.keys(meta).forEach((key) => {
+        metaTag.setAttribute(key, meta[key]);
+      });
+      document.head.appendChild(metaTag);
+    });console.log('entered');
 
-  // }, []);
+  }, []);
 
 
 
@@ -73,14 +73,30 @@ export default function Home() {
   const handelExplore = () => {
     window.open(URL.ASSESSMENT, '_blank');
   }
+  const render=()=>{
+    const metaTags = [
+      { property: "og:title", content: "Alignmycareer Course Completion Certificate" },
+      { property: "og:url", content: "https://neerajyadav0.github.io/testing-repo/" },
+      { property: "og:description", content: "my completion certi" },
+      { name: "image", property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
+      { property: "og:image", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
+      { property: "og:image:secure_url", content: "https://www.alignmycareer.com/api/v1/file/download?file=candidate/6395d09b766c1d23c5ec347e/photo/images1%20(1).jpg" },
+      { property: "og:site_name", content: "Alignmycareer" },
+      { property: "og:locale", content: "en_US" },
+    ];
+    metaTags.forEach((meta) => {
+      const metaTag = document.createElement('meta');
+      Object.keys(meta).forEach((key) => {
+        metaTag.setAttribute(key, meta[key]);
+      });
+      document.head.appendChild(metaTag);
+    });console.log('entered');
+    return null;
+  }
   
-  return (<>    
-       <Helmet>
-        {metaTags.map((tag, index) => (
-          <meta key={index} {...tag} />
-        ))}
-      </Helmet>
+  return (<> {render()}
   <div className='container'>
+      {console.log("indata")}
       
       <Grid container className='d-flex flex-wrap justify-content-evenly'>
         <Grid item md={8} sm={12} xs={12} className='d-flex flex-column gap-3'>
